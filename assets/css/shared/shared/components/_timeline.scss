@@ -1,0 +1,61 @@
+.timeline {
+    list-style: none;
+    padding-left: 0;
+
+    .timeline-item {
+        border-left: 1px solid $border-color;
+        color: $text-muted;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        position: relative;
+
+        &:before {
+            content: "";
+            height: 10px;
+            width: 10px;
+            border-radius: 10px;
+            position: absolute;
+            top: 0px;
+            left: -5px;
+        }
+
+        &:nth-child(4n + 1) {
+            &:before {
+                background: $success;
+            }
+        }
+
+        &:nth-child(4n + 2) {
+            &:before {
+                background: $primary;
+            }
+        }
+
+        &:nth-child(4n + 3) {
+            &:before {
+                background: $warning;
+            }
+        }
+
+        &:nth-child(4n + 4) {
+            &:before {
+                background: $info;
+            }
+        }
+
+        &:last-child {
+            border-left: none;
+            padding-bottom: 0;
+        }
+
+        .timeline-content {
+            margin-bottom: 0;
+            line-height: 10px;
+
+        }
+
+        .event-time {
+            margin-bottom: 0;
+        }
+    }
+}
